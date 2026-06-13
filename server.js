@@ -1,3 +1,10 @@
+/* 
+  =============================================================================
+  © 2026 Vedant Khalshinge. All Rights Reserved.
+  This code is the intellectual property of Vedant Khalshinge.
+  Unauthorized copying, modification, or distribution is strictly prohibited.
+  ============================================================================= 
+*/
 const express = require('express');
 const rateLimit = require('express-rate-limit');
 const mongoose = require('mongoose');
