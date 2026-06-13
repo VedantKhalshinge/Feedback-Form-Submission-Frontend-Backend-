@@ -1,3 +1,10 @@
+/* 
+  =============================================================================
+  © 2026 Vedant Khalshinge. All Rights Reserved.
+  This code is the intellectual property of Vedant Khalshinge.
+  Unauthorized copying, modification, or distribution is strictly prohibited.
+  ============================================================================= 
+*/
 const http = require('http');
 
 async function testEndpoint(name, path, method, contentType, bodyText) {

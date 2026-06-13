@@ -2,6 +2,8 @@
   "name": "feedback-form",
   "version": "1.0.0",
   "description": "Feedback form with Express.js backend and premium HTML5 frontend",
+  "author": "Vedant Khalshinge",
+  "license": "UNLICENSED",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
