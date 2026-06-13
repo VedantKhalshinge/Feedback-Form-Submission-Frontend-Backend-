@@ -1,0 +1,16 @@
+{
+  "name": "feedback-form",
+  "version": "1.0.0",
+  "description": "Feedback form with Express.js backend and premium HTML5 frontend",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.0",
+    "express-rate-limit": "^7.4.0",
+    "mongoose": "^8.8.0",
+    "multer": "^1.4.5-lts.1"
+  }
+}
