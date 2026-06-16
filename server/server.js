@@ -14,6 +14,7 @@ const PORT = process.env.PORT || 3050;
 const MONGO_URI = process.env.MONGO_URI || 'mongodb://127.0.0.1:27017/feedback-db';
 
 // ── Database Connection ─────────────────────────────────────────────
+mongoose.set('bufferCommands', false); // Fail fast if MongoDB isn't running
 mongoose.connect(MONGO_URI, { serverSelectionTimeoutMS: 3000 })
   .then(() => console.log('📦  MongoDB Connected securely.'))
   .catch(err => {
