@@ -45,6 +45,11 @@
           <textarea id="message" name="message" placeholder="What's on your mind?" required></textarea>
         </div>
 
+        <div class="form-group">
+          <label for="attachment">Attachment (Optional)</label>
+          <input type="file" id="attachment" name="attachment" accept="image/*, .pdf" style="font-size: 0.85rem;" />
+        </div>
+
         <button type="submit" id="submitBtn" class="btn-submit">
           <span class="btn-text">Send Feedback</span>
           <span class="spinner hidden" id="loadingSpinner"></span>

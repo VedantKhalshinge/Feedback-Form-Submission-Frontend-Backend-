@@ -7,17 +7,14 @@
 
 /**
  * Submits feedback data to the backend.
- * @param {Object} data - Contains name, email, and message.
+ * @param {FormData} formData - The FormData object containing text and files.
  * @returns {Promise<Object>} Response object from the server.
  */
-async function submitFeedbackApi(data) {
+async function submitFeedbackApi(formData) {
   try {
     const response = await fetch('/feedback', {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(data)
+      body: formData // No Content-Type header required for FormData
     });
 
     const result = await response.json();

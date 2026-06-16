@@ -26,8 +26,17 @@ document.addEventListener('DOMContentLoaded', () => {
     // Prepare API Request
     UI.setLoading(true);
 
-    const payload = { name, email, message };
-    const response = await submitFeedbackApi(payload);
+    const formData = new FormData();
+    formData.append('name', name);
+    formData.append('email', email);
+    formData.append('message', message);
+    
+    const fileInput = document.getElementById('attachment');
+    if (fileInput.files.length > 0) {
+      formData.append('attachment', fileInput.files[0]);
+    }
+
+    const response = await submitFeedbackApi(formData);
 
     UI.setLoading(false);
 
