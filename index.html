@@ -1,0 +1,72 @@
+<!-- 
+  =============================================================================
+  © 2026 Vedant Khalshinge. All Rights Reserved.
+  This code is the intellectual property of Vedant Khalshinge.
+  Unauthorized copying, modification, or distribution is strictly prohibited.
+  ============================================================================= 
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Minimal Feedback Form</title>
+  
+  <!-- Inter Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <div class="container">
+    <header class="header">
+      <h1>Feedback</h1>
+      <p>We'd love to hear your thoughts and suggestions.</p>
+    </header>
+
+    <main class="card">
+      <form id="feedbackForm" novalidate>
+        
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" placeholder="Enter your full name" required />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" required />
+        </div>
+
+        <div class="form-group">
+          <label for="message">Feedback Message</label>
+          <textarea id="message" name="message" placeholder="What's on your mind?" required></textarea>
+        </div>
+
+        <button type="submit" id="submitBtn" class="btn-submit">
+          <span class="btn-text">Send Feedback</span>
+          <span class="spinner hidden" id="loadingSpinner"></span>
+        </button>
+      </form>
+
+      <!-- Status Messages Area -->
+      <div id="statusSection" class="status-section hidden">
+        <div id="successMessage" class="alert alert-success hidden"></div>
+        <div id="errorMessage" class="alert alert-error hidden"></div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      &copy; 2026 Vedant Khalshinge. All Rights Reserved.
+    </footer>
+  </div>
+
+  <!-- Modular Scripts -->
+  <script src="js/validation.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
